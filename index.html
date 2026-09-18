@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/public/icon-02.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Dinesh Kumar S — Jr. Software Developer specializing in backend architecture, REST APIs, and Spring microservices."
+    />
+    <meta property="og:title" content="Dinesh Kumar S | Backend Developer" />
+    <meta
+      property="og:description"
+      content="Portfolio showcasing backend development, system design, and microservices with Spring Boot and NestJS."
+    />
+    <meta property="og:type" content="website" />
+    <title>Dinesh Kumar S | Software Engineer</title>
+    <script>
+      (function () {
+        var stored = localStorage.getItem("theme");
+        var theme =
+          stored === "light" || stored === "dark"
+            ? stored
+            : window.matchMedia("(prefers-color-scheme: light)").matches
+              ? "light"
+              : "dark";
+        document.documentElement.classList.remove("light", "dark");
+        document.documentElement.classList.add(theme);
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

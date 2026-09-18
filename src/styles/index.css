@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    @apply min-h-screen bg-slate-50 font-sans text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100;
+  }
+
+  #root {
+    @apply min-h-screen;
+  }
+}
+
+@layer components {
+  .text-gradient-brand {
+    @apply bg-gradient-text bg-clip-text text-transparent;
+  }
+
+  .glass-card {
+    @apply rounded-2xl border border-slate-200 bg-white/90 shadow-sm backdrop-blur-xl dark:border-slate-700/50 dark:bg-slate-900/70;
+  }
+}
+
+@layer utilities {
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+}
+
+.hero-mesh {
+  @apply bg-gradient-hero;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-orb-drift-1,
+  .animate-orb-drift-2,
+  .animate-orb-drift-3,
+  .animate-bounceSoft {
+    animation: none !important;
+  }
+
+  .profile-portrait-frame {
+    box-shadow: 0 0 16px rgba(34, 211, 238, 0.15);
+  }
+}
